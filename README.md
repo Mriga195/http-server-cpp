@@ -8,10 +8,36 @@ sockets, concurrency and OS fundamentals.
 - Read the matching section of [Beej's Guide](https://beej.us/guide/bgnet/) after each lesson.
 - Commit after every milestone.
 
-## Build
+## Folder layout
 ```
-make NAME=echo_server      # compiles src/echo_server.cpp -> build/echo_server
+exercises/   one standalone practice file per lesson
+server/      the real project; grows from Lesson 4 onward
+notes/       my notes, one file per lesson (copy notes/_template.md)
+build/       compiled binaries (git-ignored)
 ```
+
+## Naming rules
+| What | Pattern | Example |
+|---|---|---|
+| Exercise | `exercises/LNN-short-name.cpp` | `exercises/L02-echo-server.cpp` |
+| Notes | `notes/LNN-short-name.md` (same name as the exercise) | `notes/L02-echo-server.md` |
+| Server files | `server/snake_case.cpp` / `.hpp`, one job per file | `server/thread_pool.hpp` |
+| Commit | `LNN: what changed` | `L02: echo server accepts one client` |
+| Git tag | `lesson-NN` when a lesson is done | `lesson-02` |
+
+`NN` is always two digits (`00`–`10`). Names are lowercase with hyphens.
+
+## Workflow for every lesson
+1. **Learn:** get the lesson explanation, then read the Beej's Guide section.
+2. **Notes:** `cp notes/_template.md notes/LNN-short-name.md` and fill in "What I learned".
+3. **Code:** write `exercises/LNN-short-name.cpp` yourself.
+4. **Build and run:** `make run L=NN`.
+5. **Review:** paste the code for review; fix the issues yourself.
+6. **Finish notes:** bugs hit, interview Q&A, anything still unclear.
+7. **Commit and tag:** `git add -A && git commit -m "LNN: ..." && git tag lesson-NN`.
+8. **Tick** the lesson in the Progress table below.
+
+From Lesson 4, steps 3–4 also apply to `server/` (`make server`, then `./build/server`).
 
 ## Progress
 | Lesson | Topic | Done |
