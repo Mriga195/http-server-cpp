@@ -9,3 +9,4 @@ The user is learning C++ systems programming through this project. It must be th
 - Roadmap and progress are in README.md; tick a lesson only when the user's code works.
 - Ask the user to explain their code back now and then, since interviews will.
 - Follow the naming rules and per-lesson workflow in README.md; remind the user of the next step if they skip one.
+- Each lesson needs: main exercise, at least one variation (2–3 for Lessons 6–8), a break-it-on-purpose test, and an explain-back before the lesson is ticked.

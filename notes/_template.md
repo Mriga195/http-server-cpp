@@ -10,6 +10,12 @@ Date:
 |---|---|---|
 | | | |
 
+## Variations I did
+- 
+
+## What broke when I broke it on purpose
+- 
+
 ## Bugs I hit and how I fixed them
 -
 

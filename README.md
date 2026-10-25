@@ -20,24 +20,27 @@ build/       compiled binaries (git-ignored)
 | What | Pattern | Example |
 |---|---|---|
 | Exercise | `exercises/LNN-short-name.cpp` | `exercises/L02-echo-server.cpp` |
+| Variation | `exercises/LNNx-short-name.cpp`, x = b, c, d… | `exercises/L02b-uppercase-echo.cpp` |
 | Notes | `notes/LNN-short-name.md` (same name as the exercise) | `notes/L02-echo-server.md` |
 | Server files | `server/snake_case.cpp` / `.hpp`, one job per file | `server/thread_pool.hpp` |
 | Commit | `LNN: what changed` | `L02: echo server accepts one client` |
 | Git tag | `lesson-NN` when a lesson is done | `lesson-02` |
 
 `NN` is always two digits (`00`–`10`). Names are lowercase with hyphens.
+Never add a second `LNN-*.cpp` for the same lesson: `make run L=NN` compiles every match, so two files mean two `main()`s. Use a letter (`L=02b`).
 
 ## Workflow for every lesson
 1. **Learn:** get the lesson explanation, then read the Beej's Guide section.
 2. **Notes:** `cp notes/_template.md notes/LNN-short-name.md` and fill in "What I learned".
-3. **Code:** write `exercises/LNN-short-name.cpp` yourself.
-4. **Build and run:** `make run L=NN`.
-5. **Review:** paste the code for review; fix the issues yourself.
-6. **Finish notes:** bugs hit, interview Q&A, anything still unclear.
-7. **Commit and tag:** `git add -A && git commit -m "LNN: ..." && git tag lesson-NN`.
-8. **Tick** the lesson in the Progress table below.
+3. **Code:** write `exercises/LNN-short-name.cpp` yourself. Run it: `make run L=NN`.
+4. **Review:** paste the code for review; fix the issues yourself.
+5. **Variation:** the same idea with one twist, in `exercises/LNNb-....cpp` (`make run L=NNb`). Lessons 6–8: do 2–3 (`b`, `c`, `d`).
+6. **Break it on purpose:** remove a `close()`, skip a lock, use a taken port. Write what happened in your notes.
+7. **Explain it back:** describe each call in plain words without looking at the code. Finish your notes: bugs, interview Q&A, what's still unclear.
+8. **Commit and tag:** `git add -A && git commit -m "LNN: ..." && git tag lesson-NN`.
+9. **Tick** the lesson in the Progress table below.
 
-From Lesson 4, steps 3–4 also apply to `server/` (`make server`, then `./build/server`).
+From Lesson 4, steps 3–6 also apply to `server/` (`make server`, then `./build/server`).
 
 ## Progress
 | Lesson | Topic | Done |
