@@ -45,7 +45,7 @@ From Lesson 4, steps 3–6 also apply to `server/` (`make server`, then `./build
 ## Progress
 | Lesson | Topic | Done |
 |---|---|---|
-| 0 | IP, ports, TCP; what a socket is | [ ] |
+| 0 | IP, ports, TCP; what a socket is | [x] |
 | 1 | File descriptors | [ ] |
 | 2 | Echo server: socket, bind, listen, accept | [ ] |
 | 3 | Client: connect; testing with nc and curl | [ ] |
